@@ -1,0 +1,11 @@
+{
+	"name": "webtef",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/viniciussanchez/restrequest4delphi": "^v3.1.0"
+	}
+}

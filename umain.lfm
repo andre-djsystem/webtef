@@ -1,0 +1,293 @@
+object frMain: TfrMain
+  Left = 863
+  Height = 611
+  Top = 325
+  Width = 912
+  Caption = 'WebTEF - MercadoPago'
+  ClientHeight = 611
+  ClientWidth = 912
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object pgMain: TPageControl
+    Left = 0
+    Height = 611
+    Top = 0
+    Width = 912
+    ActivePage = tsMethods
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object tsMethods: TTabSheet
+      Caption = 'Métodos'
+      ClientHeight = 583
+      ClientWidth = 904
+      object pnCommands: TPanel
+        Left = 0
+        Height = 583
+        Top = 0
+        Width = 312
+        Align = alLeft
+        ClientHeight = 583
+        ClientWidth = 312
+        TabOrder = 0
+        object btnGenerateAccessToken: TButton
+          Left = 8
+          Height = 25
+          Top = 8
+          Width = 296
+          Caption = 'Gerar Access Token'
+          OnClick = btnGenerateAccessTokenClick
+          TabOrder = 0
+        end
+        object btnRefreshToken: TButton
+          Left = 8
+          Height = 25
+          Top = 36
+          Width = 296
+          Caption = 'Refresh Token'
+          OnClick = btnRefreshTokenClick
+          TabOrder = 1
+        end
+        object btnGetDevices: TButton
+          Left = 8
+          Height = 25
+          Top = 64
+          Width = 296
+          Caption = 'Listar Dispositivos'
+          OnClick = btnGetDevicesClick
+          TabOrder = 2
+        end
+        object btnChangeOperatingMode: TButton
+          Left = 8
+          Height = 25
+          Top = 92
+          Width = 296
+          Caption = 'Alterar Modo de Operação'
+          OnClick = btnChangeOperatingModeClick
+          TabOrder = 3
+        end
+        object btnCreatePayment: TButton
+          Left = 8
+          Height = 25
+          Top = 144
+          Width = 296
+          Caption = 'Criar Pagamento'
+          OnClick = btnCreatePaymentClick
+          TabOrder = 4
+        end
+        object btnCancelPayment: TButton
+          Left = 8
+          Height = 25
+          Top = 172
+          Width = 296
+          Caption = 'Cancelar Pagamento'
+          OnClick = btnCancelPaymentClick
+          TabOrder = 5
+        end
+        object btnGetPaymentIntents: TButton
+          Left = 8
+          Height = 25
+          Top = 200
+          Width = 296
+          Caption = 'Buscar Intenção de Pagamento'
+          OnClick = btnGetPaymentIntentsClick
+          TabOrder = 6
+        end
+        object btnGetPaymentIntentsLastStatus: TButton
+          Left = 8
+          Height = 25
+          Top = 228
+          Width = 296
+          Caption = 'Último Status Intenção de Pagamento'
+          OnClick = btnGetPaymentIntentsLastStatusClick
+          TabOrder = 7
+        end
+        object btnGetPayment: TButton
+          Left = 8
+          Height = 25
+          Top = 256
+          Width = 296
+          Caption = 'Obter Pagamento Efetuado'
+          OnClick = btnGetPaymentClick
+          TabOrder = 8
+        end
+        object btnCreateRefund: TButton
+          Left = 8
+          Height = 25
+          Top = 284
+          Width = 296
+          Caption = 'Criar Estorno'
+          OnClick = btnCreateRefundClick
+          TabOrder = 9
+        end
+        object btnGetPayments: TButton
+          Left = 8
+          Height = 25
+          Top = 312
+          Width = 296
+          Caption = 'Obter Lista de Pagamentos'
+          OnClick = btnGetPaymentsClick
+          TabOrder = 10
+        end
+        object Label1: TLabel
+          Left = 8
+          Height = 15
+          Top = 384
+          Width = 70
+          Caption = 'Access Token'
+          ParentColor = False
+        end
+        object edAccessToken: TEdit
+          Left = 8
+          Height = 23
+          Top = 404
+          Width = 296
+          TabOrder = 11
+        end
+        object Label2: TLabel
+          Left = 8
+          Height = 15
+          Top = 432
+          Width = 58
+          Caption = 'Id Terminal'
+          ParentColor = False
+        end
+        object edDeviceId: TEdit
+          Left = 8
+          Height = 23
+          Top = 452
+          Width = 296
+          TabOrder = 12
+        end
+        object Label3: TLabel
+          Left = 8
+          Height = 15
+          Top = 480
+          Width = 132
+          Caption = 'Id Inteção de Pagamento'
+          ParentColor = False
+        end
+        object edPaymentIntentId: TEdit
+          Left = 8
+          Height = 23
+          Top = 500
+          Width = 296
+          TabOrder = 13
+        end
+        object Label4: TLabel
+          Left = 8
+          Height = 15
+          Top = 528
+          Width = 74
+          Caption = 'Id Pagamento'
+          ParentColor = False
+        end
+        object edPayment: TEdit
+          Left = 8
+          Height = 23
+          Top = 548
+          Width = 296
+          TabOrder = 14
+        end
+        object btnGetPaymentsIntents: TButton
+          Left = 8
+          Height = 25
+          Top = 340
+          Width = 296
+          Caption = 'Obter Lista de Intenção de Pagamentos'
+          OnClick = btnGetPaymentsIntentsClick
+          TabOrder = 15
+        end
+      end
+      object mAnswer: TMemo
+        Left = 312
+        Height = 583
+        Top = 0
+        Width = 592
+        Align = alClient
+        TabOrder = 1
+      end
+    end
+    object tsConfig: TTabSheet
+      Caption = 'Configurações'
+      ClientHeight = 583
+      ClientWidth = 904
+      object Label5: TLabel
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 66
+        Caption = 'Client Secret'
+        ParentColor = False
+      end
+      object edClientSecret: TEdit
+        Left = 8
+        Height = 23
+        Top = 24
+        Width = 320
+        TabOrder = 0
+      end
+      object Label6: TLabel
+        Left = 8
+        Height = 15
+        Top = 56
+        Width = 44
+        Caption = 'Client Id'
+        ParentColor = False
+      end
+      object edClientId: TEdit
+        Left = 8
+        Height = 23
+        Top = 72
+        Width = 320
+        TabOrder = 1
+      end
+      object Label8: TLabel
+        Left = 8
+        Height = 15
+        Top = 104
+        Width = 28
+        Caption = 'Code'
+        ParentColor = False
+      end
+      object edCode: TEdit
+        Left = 8
+        Height = 23
+        Top = 120
+        Width = 320
+        TabOrder = 2
+      end
+      object Label9: TLabel
+        Left = 8
+        Height = 15
+        Top = 152
+        Width = 64
+        Caption = 'Redirect URI'
+        ParentColor = False
+      end
+      object edRedirectURI: TEdit
+        Left = 8
+        Height = 23
+        Top = 168
+        Width = 320
+        TabOrder = 3
+      end
+      object Label10: TLabel
+        Left = 8
+        Height = 15
+        Top = 200
+        Width = 73
+        Caption = 'Refresh Token'
+        ParentColor = False
+      end
+      object edRefreshToken: TEdit
+        Left = 8
+        Height = 23
+        Top = 216
+        Width = 320
+        TabOrder = 4
+      end
+    end
+  end
+end
