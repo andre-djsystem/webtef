@@ -483,18 +483,18 @@ begin
   Result := EmptyStr;
   try
     LJson := TJSONObject.Create;
-    LJson.Add('amount', Trunc(AAmount*100));
+    //LJson.Add('amount', Trunc(AAmount*100));
     LResponse := TRequest
                          .New.BaseURL(Format('https://api.mercadopago.com/v1/payments/%s/refunds',[AIdPayment]))
                          .TokenBearer(AToken)
-                         .ContentType('application/json')
-                         .AddBody(LJson.AsJSON)
+                         //.ContentType('application/json')
+                         //.AddBody(LJson.AsJSON)
                          .Post;
   finally
     LJson.Free;
   end;
   Result := LResponse.Content;
-  if (LResponse.StatusCode <> 200) then
+  if (LResponse.StatusCode <> 201) then
      raise Exception.Create(Format('Erro ao efetuar a requisição %d', [LResponse.StatusCode]));
 end;
 
