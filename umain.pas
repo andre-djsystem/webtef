@@ -269,8 +269,7 @@ begin
 end;
 
 
-function TfrMain.CreateAccessToken(const AClientSecret, AClientId,
-  ACode, ARedirectUri: String): String;
+function TfrMain.CreateAccessToken(const AClientSecret, AClientId, ARedirectUri: String): String;
 var
   LResponse: IResponse;
   LJson: TJSONObject;
@@ -281,12 +280,10 @@ begin
     LJson.Add('client_secret', AClientSecret);
     LJson.Add('client_id', AClientId);
     LJson.Add('grant_type', 'authorization_code');
-    LJson.Add('redirect_uri', ACode);
     LJson.Add('redirect_uri', ARedirectUri);
 
     LResponse := TRequest
                          .New.BaseURL('https://api.mercadopago.com/oauth/token')
-                         .ContentType(' LJson: TJSONObject;  ')
                          .ContentType('application/json')
                          .AddBody(LJson.AsJSON)
                          .Post;
